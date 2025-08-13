@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    ports:
+      - ${GOBID_DATABASE_PORT:-5432}:5432
+    environment:
+      POSTGRESS_USER: ${GOBID_DATABASE_USER}
+      POSTGRESS_PASSWORD: ${GOBID_DATABASE_PASSWORD}
+      POSTGRESS_DB: ${GOBID_DATABASE_NAME}
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
+    driver: local
