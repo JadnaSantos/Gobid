@@ -18,8 +18,20 @@ func (api *Api) BindRoutes() {
 			r.Route("/users", func(r chi.Router) {
 				r.Post("/signup", api.handleSignupUser)
 				r.Post("/sign", api.handleSignUser)
-				r.With(api.AuthMiddleware).Post("/logout", api.handleLogoutUser)
 
+				r.Group(func(r chi.Router) {
+					r.Use(api.AuthMiddleware)
+					r.Post("/logout", api.handleLogoutUser)
+
+				})
+			})
+
+			r.Route("/products", func(r chi.Router) {
+				r.Group(func(r chi.Router) {
+					r.Use(api.AuthMiddleware)
+					r.Post("/", api.handleCreateProduct)
+
+				})
 			})
 		})
 	})
