@@ -6,7 +6,7 @@ import (
 
 	"github.com/JadnaSantos/Gobid.git/internal/jsonutils"
 	"github.com/JadnaSantos/Gobid.git/internal/services"
-	"github.com/JadnaSantos/Gobid.git/internal/user"
+	"github.com/JadnaSantos/Gobid.git/internal/usecase/user"
 )
 
 func (api *Api) handleSignupUser(w http.ResponseWriter, r *http.Request) {
