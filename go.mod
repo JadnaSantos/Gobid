@@ -3,6 +3,7 @@ module github.com/JadnaSantos/Gobid.git
 go 1.24.5
 
 require (
+	github.com/alexedwards/scs/pgxstore v0.0.0-20250417082927-ab20b3feb5e9
 	github.com/go-chi/chi/v5 v5.2.2
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v5 v5.7.5
@@ -11,8 +12,8 @@ require (
 )
 
 require (
-	github.com/alexedwards/scs/pgxstore v0.0.0-20250417082927-ab20b3feb5e9 // indirect
 	github.com/gorilla/securecookie v1.1.2 // indirect
+	github.com/gorilla/websocket v1.5.3 // indirect
 )
 
 require (
