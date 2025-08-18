@@ -10,6 +10,7 @@ import (
 
 	"github.com/alexedwards/scs/pgxstore"
 	"github.com/google/uuid"
+	"github.com/gorilla/websocket"
 
 	"github.com/JadnaSantos/Gobid.git/internal/api"
 	"github.com/JadnaSantos/Gobid.git/internal/services"
@@ -55,6 +56,9 @@ func main() {
 		UserService:    services.NewUserService(pool),
 		ProductService: services.NewProductService(pool),
 		Sessions:       s,
+		WsUpgrader: websocket.Upgrader{
+			CheckOrigin: func(r *http.Request) bool { return true },
+		},
 	}
 
 	api.BindRoutes()
