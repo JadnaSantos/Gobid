@@ -16,3 +16,21 @@ sessões de chat, hashing de senha e segurança com CSRF tokens.
 - Websocket
 
 
+## ⏳ Instalação e execução
+
+Faça um clone desse repositório e acesse o diretório.
+
+```bash
+$ git clonehttps://github.com/JadnaSantos/app-theMovie.git
+```
+
+```bash
+# Instalando as dependências
+$ go mod tidy
+
+# Executanto aplicação
+$ air —build.cmd “go build -o ./bin/api ./cmd/api” — build.bin “./bin/api”
+
+# Executando o Docker
+docker compose -up
+```
