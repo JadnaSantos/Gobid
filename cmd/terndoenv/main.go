@@ -8,17 +8,15 @@ import (
 )
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		panic(err)
-	}
+	godotenv.Load()
 
 	cmd := exec.Command(
 		"tern",
 		"migrate",
 		"--migrations",
-		"./internal/stor/pgstore/migrations",
-		"config",
-		"./internal/stor/pgstore/migrations/tern.conf",
+		"./internal/store/pgstore/migrations",
+		"--config",
+		"./internal/store/pgstore/migrations/tern.conf",
 	)
 
 	output, err := cmd.CombinedOutput()
