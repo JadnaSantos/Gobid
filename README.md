@@ -7,7 +7,7 @@ sessões de chat, hashing de senha e segurança com CSRF tokens.
 
 
 ## 🛠️ Tecnologias
-- API REST feita com Golanf e Chi
+- API REST feita com Golang e Chi
 - SKRC;
 - TERN;
 - Docker
@@ -34,4 +34,5 @@ $ air —build.cmd “go build -o ./bin/api ./cmd/api” — build.bin “./bin/
 # Executando o Docker
 docker compose -up
 ```
+
 
