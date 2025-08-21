@@ -7,7 +7,7 @@ sessões de chat, hashing de senha e segurança com CSRF tokens.
 
 
 ## 🛠️ Tecnologias
-
+- API REST feita com Golanf e Chi
 - SKRC;
 - TERN;
 - Docker
@@ -21,7 +21,7 @@ sessões de chat, hashing de senha e segurança com CSRF tokens.
 Faça um clone desse repositório e acesse o diretório.
 
 ```bash
-$ git clonehttps://github.com/JadnaSantos/app-theMovie.git
+$ git clone https://github.com/JadnaSantos/app-theMovie.git
 ```
 
 ```bash
@@ -34,3 +34,4 @@ $ air —build.cmd “go build -o ./bin/api ./cmd/api” — build.bin “./bin/
 # Executando o Docker
 docker compose -up
 ```
+
